@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775630219" />
+    <testcase name="test_write" classname="register_file_tb" file="/Users/nikhilkumar/Documents/GitHub/register_file/register_file_tb.py" lineno="5" time="0.0010371208190917969" sim_time_ns="1.0" ratio_time="964.207816091954" />
+    <testcase name="test_address" classname="register_file_tb" file="/Users/nikhilkumar/Documents/GitHub/register_file/register_file_tb.py" lineno="16" time="0.00023818016052246094" sim_time_ns="11.0" ratio_time="46183.52752752753">
+      <failure error_type="AssertionError" error_msg="Addressing works correctly" />
+    </testcase>
+    <testcase name="test_write_enable" classname="register_file_tb" file="/Users/nikhilkumar/Documents/GitHub/register_file/register_file_tb.py" lineno="27" time="0.00028324127197265625" sim_time_ns="10.999999999999998" ratio_time="38836.14814814814">
+      <failure error_type="AssertionError" error_msg="Write enable works correctly" />
+    </testcase>
+    <testcase name="test_write_simultaneously" classname="register_file_tb" file="/Users/nikhilkumar/Documents/GitHub/register_file/register_file_tb.py" lineno="38" time="0.0003108978271484375" sim_time_ns="31.0" ratio_time="99711.21472392639" />
+    <testcase name="test_overwrite" classname="register_file_tb" file="/Users/nikhilkumar/Documents/GitHub/register_file/register_file_tb.py" lineno="54" time="0.0002548694610595703" sim_time_ns="31.000000000000007" ratio_time="121630.8924228251" />
+  </testsuite>
+</testsuites>

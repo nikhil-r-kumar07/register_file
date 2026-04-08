@@ -9,15 +9,16 @@ module register_file(
     output logic [3:0] read_data_b
 );
 
-logic [3:0] registers [4];
+    logic [3:0] registers [4];
 
-always_ff @(posedge clk) begin
-    if (write_enable) begin
-        registers[write_address] <= write_data;
+    always_ff @(posedge clk) begin
+        if (write_enable) begin
+            registers[write_address] <= write_data;
+        end
     end
-end
 
-always_comb begin
-    read_data_a = registers[read_address_a];
-    read_data_b = registers[read_address_b];
-end
+    always_comb begin
+        read_data_a = registers[read_address_a];
+        read_data_b = registers[read_address_b];
+    end
+endmodule
