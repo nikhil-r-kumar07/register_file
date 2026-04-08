@@ -1,5 +1,6 @@
 module register_file(
     input logic clk,
+    input logic areset,
     input logic write_enable,
     input logic [1:0] write_address,
     input logic [3:0] write_data,
@@ -11,8 +12,13 @@ module register_file(
 
     logic [3:0] registers [4];
 
-    always_ff @(posedge clk) begin
-        if (write_enable) begin
+    always_ff @(posedge clk or posedge areset) begin
+        if (areset) begin
+            registers[0] <= 4'b0000;
+            registers[1] <= 4'b0000;
+            registers[2] <= 4'b0000;
+            registers[3] <= 4'b0000;
+        end else if (write_enable) begin
             registers[write_address] <= write_data;
         end
     end
