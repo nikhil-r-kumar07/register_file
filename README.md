@@ -1,7 +1,7 @@
 # Register File
 An array of registers that can be read and written. Reading does not destroy the data in the register.
 ## How It Works
-Given an input of an address and data to write, a corresponding register can be overwritten. Writing is not synchronous.
+Given an input of an address and data to write, a corresponding register can be overwritten. Writing is synchronous and is triggered on the rising edge.
 Given an input of an address to read, a corresponding register can be read without destroying the data. Up to two addresses can be read. 
 ## Features
 - Always flip flop block for sequential logic (updating written addresses)
